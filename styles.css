@@ -5,7 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Be Vietnam Pro', sans-serif;
-
+    scroll-behavior: smooth;
 }
 
 :root{
@@ -528,5 +528,105 @@ a{
     }
     .project-number-left{
         left:2px
+    }
+}
+
+
+/* skills section  */
+
+.skills-container{
+    display: flex;
+    position: relative;
+    padding-block: 5rem;
+    margin: 10rem auto;
+    gap: 30px;
+}
+
+.skills-container-left{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 50%;
+}
+
+.caps{
+    font-size: 90px;
+}
+
+.skills-sub-heading{
+    margin-top: -2px;
+}
+
+
+.skills-heading{
+    color:var(--bgOrange);
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 50px;
+}
+
+.paragraph-1{
+    margin: 15px 0;
+}
+.paragraph{
+    width: 85%;
+    text-align: justify;
+}
+
+.skills-container-right{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    width: 50%;
+    position: relative;
+}
+
+.skills-logo{
+    width: 90px;
+    transition: all 0.5s;
+
+}
+
+.skills-logo:hover{
+    transform: scale(1.2);
+}
+
+.skills-container-right::before{
+    content: "";
+    background-image: url(/Images/userAsset/blob\ vector.png);
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: motion 4s infinite linear;
+}
+
+.faded-text-skills{
+    position: absolute;
+    font-size: 15em;
+    color: rgb(231,231,231);
+    bottom: -34.5%;
+    right: -25%;
+    user-select: none;
+    overflow-y: hidden;
+}
+
+@keyframes motion {
+    0%{
+        top: 0;
+        left: 0;
+    }
+    50%{
+        top:54%;
+        left:46%;
+    }
+    100%{
+        top: 0;
+        left: 0;
     }
 }
